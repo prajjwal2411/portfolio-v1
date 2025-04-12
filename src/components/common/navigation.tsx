@@ -3,11 +3,23 @@
 import GradientText from "@/components/animations/GradientText/GradientText";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navigation() {
 
   const [isDark, setIsDark] = useState<boolean>(false);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    const stored = localStorage.getItem("theme");
+
+    if (stored === "dark") {
+      root.classList.add("dark");
+      setIsDark(true);
+    } else {
+      root.classList.remove("dark");
+    }
+  }, []);
 
   const toggleTheme = () => {
     const root = window.document.documentElement;
