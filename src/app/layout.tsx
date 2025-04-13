@@ -15,8 +15,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="mx-2">
-        <Navigation />
+        <header>
+          <Navigation />
+        </header>
         {children}
+        <footer className="flex justify-center items-center h-16 bg-gray-800 text-white">
+          <p>&copy; 2025 Prajjwal Singh. All rights reserved.</p>
+        </footer>
       </body>
     </html>
   );

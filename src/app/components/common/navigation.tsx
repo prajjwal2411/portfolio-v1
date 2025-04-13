@@ -1,13 +1,14 @@
-"use client"
+"use client";
 
 import GradientText from "@/app/components/animations/GradientText/GradientText";
-import { Button } from "@/app/components/ui/button";
-import { Switch } from "@/app/components/ui/switch";
+import { Switch } from "@/components/ui/switch";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Navigation() {
-
   const [isDark, setIsDark] = useState<boolean>(false);
+  const pathName = usePathname();
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -36,10 +37,9 @@ export default function Navigation() {
     }
   };
 
-
   return (
     <>
-      <div className="w-full mt-2 flex flex-row justify-between items-center">
+      <div className="w-full my-2 flex flex-row justify-between items-center">
         {/* Header Name */}
         <div className="">
           <GradientText
@@ -50,18 +50,17 @@ export default function Navigation() {
             Prajjwal Singh
           </GradientText>
         </div>
-        {/* Navigation Buttons */}
+        {/* Navigation Buttons -> Change this to Cards */}
         <div className="flex flex-row justify-around p-2 border w-1/3 border-radius">
-          <Button>Home</Button>
-          <Button>Journey</Button>
-          <Button>Skills</Button>
-          <Button>Contact Me</Button>
-          <Button>Project</Button>
+          <Link href="/">Home</Link>
+          <Link href="journey"> Journey </Link>
+          <Link href="skills"> Skills </Link>
+          <Link href="contact"> Contact Me </Link>
+          <Link href="proects"> Project </Link>
         </div>
         {/* Dark Mode Switch */}
         <div className="">
-          {isDark ? 'DarkMode' : 'LightMode'}
-          <Switch onClick={toggleTheme}/>
+          <Switch onClick={toggleTheme} />
         </div>
       </div>
     </>

@@ -1,15 +1,30 @@
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+
 export default function Home() {
   return (
     <>
-      <section className="flex flex-row h-screen items-center justify-center">
-        <hgroup>
-          <h1>
-            Hi, I am Prajjwal Deep Singh, Fullstack Developer with 4 Years of
-            Experience in the Software Industry.
-          </h1>
-          <h3>Currently Working on my portfolio. So, please stay tuned</h3>
-        </hgroup>
-      </section>
+      <div className="grid grid-cols-2 grid-rows-2 gap-2 h-screen">
+        <div className="row-span-2 flex flex-col justify-center ">
+          <Card className="flex flex-col">
+            <CardHeader>
+              {/* My Photo */}
+              <div></div>
+            </CardHeader>
+            <CardContent>
+              <div className="text-center">
+                <h1>Prajjwal Singh</h1>
+                <h4>Frontend Developer</h4>
+                <h4>Pune, India</h4>
+              </div>
+              <div>
+                {/* Add Linkedin, Github, Profiles */}
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+        <div className=""></div>
+        <div className="col-start-2"></div>
+      </div>
     </>
   );
 }
