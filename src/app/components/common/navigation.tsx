@@ -5,10 +5,19 @@ import { Switch } from "@/components/ui/switch";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import GooeyNav, { GooeyNavItem } from "../animations/GooeyNav/GooeyNav";
+import { Card } from "@/components/ui/Card/card";
 
 export default function Navigation() {
   const [isDark, setIsDark] = useState<boolean>(false);
   const pathName = usePathname();
+  const items: GooeyNavItem[] = [
+    {label: 'Home', href: '/'},
+    {label: 'Journey', href: 'journey'},
+    {label: 'Skills', href: 'skills'},
+    {label: 'Contact', href: 'contact'},
+    {label: 'Projects', href: 'projects'},
+  ]
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -51,13 +60,17 @@ export default function Navigation() {
           </GradientText>
         </div>
         {/* Navigation Buttons -> Change this to Cards */}
-        <div className="flex flex-row justify-around p-2 border w-1/3 border-radius">
-          <Link href="/">Home</Link>
-          <Link href="journey"> Journey </Link>
-          <Link href="skills"> Skills </Link>
-          <Link href="contact"> Contact Me </Link>
-          <Link href="proects"> Project </Link>
-        </div>
+        <Card className="flex flex-row justify-around p-2 border w-1/3 border-radius">
+          <GooeyNav
+            items={items}
+            animationTime={600}
+            particleCount={15}
+            particleDistances={[90, 10]}
+            particleR={75}
+            colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+            timeVariance={300}
+          />
+        </Card>
         {/* Dark Mode Switch */}
         <div className="">
           <Switch onClick={toggleTheme} />

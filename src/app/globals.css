@@ -95,9 +95,12 @@
   --shadow-2xl: 0px 4px 10px 0px hsl(240 30% 25% / 0.30);
 }
 
-* {
+body {
   background-color: var(--background);
   color: var(--foreground);
+}
+
+* {
   border-color: var(--border);
 }
 
@@ -109,4 +112,19 @@ button {
 
 .border-radius {
   border-radius: var(--radius);
+}
+
+--tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+
+.shadow {
+  --tw-shadow: var(--shadow);
+  box-shadow: var(--tw-inset-shadow),
+    var(--tw-inset-ring-shadow),
+    var(--tw-ring-offset-shadow), 
+    var(--tw-ring-shadow), 
+    var(--tw-shadow)
 }

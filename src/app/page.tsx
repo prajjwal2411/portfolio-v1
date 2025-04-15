@@ -1,5 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/Card/card";
 import GithubIcon from "./components/icons/linkedin";
 import LinkedInIcon from "./components/icons/github";
 
@@ -7,7 +12,7 @@ export default function Home() {
   return (
     <>
       <div className="grid grid-cols-2 grid-rows-2 gap-2 h-screen">
-        <div className="row-span-2 flex flex-col justify-center ">
+        <div className="row-span-2 flex flex-col justify-center w-1/2">
           <Card className="flex flex-col items-center px-6">
             {/* My Photo */}
             <div></div>
@@ -26,11 +31,28 @@ export default function Home() {
             </div>
             <div>
               {/* Add a button to open the resume's PDF */}
-              <Button>Resume</Button>
+              <Button disabled>Resume</Button>
             </div>
           </Card>
         </div>
-        <div className=""></div>
+        <div className="">
+          <Card>
+            <CardHeader>
+              <CardTitle>About Me</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p>
+              I&apos;m a frontend web developer dedicated to turning ideas into
+              creative solutions. I specialize in creating seamless and
+              intuitive user experiences. My approach focuses on creating
+              scalable, high-performing solutions tailored to both user needs
+              and business objectives. By prioritizing performance,
+              accessibility, and responsiveness, I strive to deliver experiences
+              that not only engage users but also drive tangible results.
+              </p>
+            </CardContent>
+          </Card>
+        </div>
         <div className="col-start-2"></div>
       </div>
     </>

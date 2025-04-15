@@ -19,8 +19,8 @@ export default function RootLayout({
           <Navigation />
         </header>
         {children}
-        <footer className="flex justify-center items-center h-16 bg-gray-800 text-white">
-          <p>&copy; 2025 Prajjwal Singh. All rights reserved.</p>
+        <footer className="flex justify-center items-center h-16">
+          <p>&copy; Made By Prajjwal Singh with ❤️. All rights reserved.</p>
         </footer>
       </body>
     </html>
