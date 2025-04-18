@@ -18,12 +18,12 @@ export default function Home() {
             {/* My Photo */}
             <div></div>
             <div className="text-center">
-              <h1>Prajjwal Singh</h1>
-              <h4>Frontend Developer</h4>
-              <h4>Pune, India</h4>
-              <h4>prajjwals2411@gmail.com</h4>
+              <p className="text-5xl mb-12">Prajjwal Singh</p>
+              <p className="text-xl font-light">Frontend Developer</p>
+              <p className="text-xl font-light">Pune, India</p>
+              <p className="text-xl font-light">prajjwals2411@gmail.com</p>
             </div>
-            <div className="flex flex-row">
+            <div className="flex flex-row mb-12">
               <span className="m-2">
                 <GithubIcon />
               </span>
@@ -37,24 +37,19 @@ export default function Home() {
             </div>
           </Card>
         </div>
-        <div className="">
-          <Card>
-            <CardHeader>
-              <CardTitle>About Me</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p>
-                I&apos;m a frontend web developer dedicated to turning ideas
-                into creative solutions. I specialize in creating seamless and
-                intuitive user experiences. My approach focuses on creating
-                scalable, high-performing solutions tailored to both user needs
-                and business objectives. By prioritizing performance,
-                accessibility, and responsiveness, I strive to deliver
-                experiences that not only engage users but also drive tangible
-                results.
-              </p>
-            </CardContent>
-          </Card>
+        <div className="flex flex-col justify-center">
+          <div className="">
+            <h1 className="text-5xl my-4">About Me</h1>
+            <p className="text-xl">
+              I&apos;m a frontend web developer dedicated to turning ideas into
+              creative solutions. I specialize in creating seamless and
+              intuitive user experiences. My approach focuses on creating
+              scalable, high-performing solutions tailored to both user needs
+              and business objectives. By prioritizing performance,
+              accessibility, and responsiveness, I strive to deliver experiences
+              that not only engage users but also drive tangible results.
+            </p>
+          </div>
         </div>
         <div className="col-start-2">
           <div className="flex flex-row m-auto justify-around items-center">
