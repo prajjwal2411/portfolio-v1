@@ -57,32 +57,49 @@ export default function Home() {
           </Card>
         </div>
         <div className="col-start-2">
-          <div>
+          <div className="flex flex-row m-auto justify-around items-center">
             {/* Count up for years of experience */}
-            <div>
-              <CountUp
-                from={0}
-                to={4}
-                separator=","
-                direction="up"
-                duration={.1}
-                className="count-up-text"
-              />
+            <div className="flex flex-col items-center">
+              <div className="flex flex-row items-center">
+                <span>
+                  <p className="text-7xl">+</p>
+                </span>
+                <CountUp
+                  from={0}
+                  to={4}
+                  separator=","
+                  direction="up"
+                  duration={0.1}
+                  className="count-up-text text-8xl"
+                />
+              </div>
+              <span>
+                <p className="text-2xl">YEARS OF</p>
+                <p className="text-2xl">EXPERIENCE</p>
+              </span>
             </div>
 
             {/* Count up for number of skills*/}
-            <div>
-            <CountUp
-                from={0}
-                to={20}
-                separator=","
-                direction="up"
-                duration={.1}
-                className="count-up-text"
-              />
+            <div className="flex flex-col items-center">
+              <div className="flex flex-row items-center">
+                <span>
+                  <p className="text-7xl">+</p>
+                </span>
+                <CountUp
+                  from={0}
+                  to={30}
+                  separator=","
+                  direction="up"
+                  duration={0.1}
+                  className="count-up-text text-8xl"
+                />
+              </div>
+              <span>
+                <p className="text-2xl">SKILLS</p>
+                <p className="text-2xl">LEARNED</p>
+              </span>
             </div>
           </div>
-
           {/* Marquee for companies I've worked for */}
           <div></div>
         </div>
