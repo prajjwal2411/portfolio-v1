@@ -66,22 +66,16 @@ export default function Navigation() {
             Journey
           </Link>
           <Link
-            href={"skills"}
-            className={pathName === "/skills" ? "active" : ""}
+            href={"projects"}
+            className={pathName === "/projects" ? "active" : ""}
           >
-            Skills
+            Projects
           </Link>
           <Link
             href={"contact"}
             className={pathName === "/contact" ? "active" : ""}
           >
             Contact
-          </Link>
-          <Link
-            href={"projects"}
-            className={pathName === "/projects" ? "active" : ""}
-          >
-            Projects
           </Link>
         </Card>
         {/* Dark Mode Switch */}
