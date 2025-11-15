@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="mx-2">
+      <body className="mx-5">
         <header>
           <Navigation />
         </header>
