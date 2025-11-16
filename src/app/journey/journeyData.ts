@@ -2,27 +2,19 @@ export interface JourneyCardData {
     header: string;
     title: string;
     date: string;
-    description: string[];
+    description?: string[];
 }
 
 
 export const journeyData: JourneyCardData[] = [
     {
-        header: 'Bachelors Of Computer Applications',
-        title: 'Chaudhary Charan Singh University, Meerut',
-        date: '2015-2018',
+        header: 'NielsenIQ, Pune',
+        title: 'Frontend Software Engineer',
+        date: '2024-Present',
         description: [
-            'Achievement 1',
-            'Achievement 2',
-        ]
-    },
-    {
-        header: 'Masters Of Computer Applications',
-        title: 'Dr. APJ Abdul Kalam University, Lucknow',
-        date: '2018-2021',
-        description: [
-            'Achievement 1',
-            'Achievement 2',
+            'Increase the unit test coverage to 90% for the frontend repositories.',
+            'Migrated frontend repositories from azure devops to gitlab.',
+            'Designed a component library in React with Storybook, enabling consistent UI across multiple projects.'
         ]
     },
     {
@@ -30,17 +22,18 @@ export const journeyData: JourneyCardData[] = [
         title: 'Associate Software Developer',
         date: '2021-2024',
         description: [
-            'Achievement 1',
-            'Achievement 2',
+            'Implemented Google Analytics to gather and analyze user behavior data, providing valuable insights for continuous improvement.',
+            'Worked for Thomson Reuters Foundation maintained & redesigned their Stop Slavery Award website',
         ]
     },
     {
-        header: 'NielsenIQ, Pune',
-        title: 'Frontend Software Engineer',
-        date: '2024-Present',
-        description: [
-            'Achievement 1',
-            'Achievement 2',
-        ]
-    }
+        header: 'Bachelors Of Computer Applications',
+        title: 'Chaudhary Charan Singh University, Meerut',
+        date: '2015-2018',
+    },
+    {
+        header: 'Masters Of Computer Applications',
+        title: 'Dr. APJ Abdul Kalam University, Lucknow',
+        date: '2018-2021',
+    },
 ]

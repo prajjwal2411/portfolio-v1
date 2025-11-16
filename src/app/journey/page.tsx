@@ -2,7 +2,6 @@ import { Badge } from "@/components/ui/badge";
 import JourneyCard from "../components/common/JourneyCards/JourneyCard";
 import styles from "./journey.module.css";
 import { journeyData } from "./journeyData";
-import Aurora from "../components/animations/Aurora/Aurora";
 
 export default function Journey() {
   return (
@@ -34,6 +33,7 @@ export default function Journey() {
                   <JourneyCard
                     header={data?.header}
                     title={data?.title}
+                    description={data?.description}
                   ></JourneyCard>
                 </div>
               </div>

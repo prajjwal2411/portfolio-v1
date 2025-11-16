@@ -18,11 +18,13 @@ export default function JourneyCard(props: JourneyCardProps) {
     <Card className="p-5">
       <CardTitle className="">{header}</CardTitle>
       <CardTitle>{title}</CardTitle>
-      {/* <CardDescription>{date}</CardDescription> * Remove the date from here and Add it to right side of the card as a badge */}
       <CardDescription>
         <ul>
-          <li>Achievement 1</li>
-          <li>Achievement 2</li>
+          {description?.map((data, index) => {
+            return <li className="list-disc m-2 text-base" key={index+1}>
+              {data}
+            </li>
+          })}
         </ul>
       </CardDescription>{" "}
       {/* Description in a loop */}
