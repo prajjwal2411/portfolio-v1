@@ -23,8 +23,8 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="col-start-2">
-          <div className="flex flex-row m-auto justify-around items-center">
+        {/* <div className="col-start-2"> */}
+          {/* <div className="flex flex-row m-auto justify-around items-center"> */}
             {/* Count up for years of experience */}
             {/* <div className="flex flex-col items-center">
               <div className="flex flex-row items-center">
@@ -66,10 +66,10 @@ export default function Home() {
                 <p className="text-2xl">LEARNED</p>
               </span>
             </div> */}
-          </div>
+          {/* </div> */}
           {/* Marquee for companies I've worked for */}
-          <div></div>
-        </div>
+          {/* <div></div> */}
+        {/* </div> */}
       </div>
     </>
   );

@@ -65,12 +65,12 @@ export default function Navigation() {
           >
             Journey
           </Link>
-          <Link
+          {/* <Link
             href={"projects"}
             className={pathName === "/projects" ? "active" : ""}
           >
             Projects
-          </Link>
+          </Link> */}
           <Link
             href={"contact"}
             className={pathName === "/contact" ? "active" : ""}
