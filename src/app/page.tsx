@@ -1,4 +1,4 @@
-// import CountUp from "./components/animations/CountUp/CountUp";
+'use client'
 
 import IntroCard from "./components/common/IntroCard/IntroCard";
 

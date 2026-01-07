@@ -129,3 +129,13 @@ button {
     var(--tw-ring-shadow), 
     var(--tw-shadow)
 }
+
+.icon {
+  color: inherit;
+  transition: color 0.15s ease;
+}
+
+.icon:hover {
+  color: var(--primary);
+  cursor: pointer;
+}
