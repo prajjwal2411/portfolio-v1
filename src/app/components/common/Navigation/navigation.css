@@ -3,3 +3,16 @@
     background-color: var(--primary);
     padding: .5em;
 }
+
+
+
+/* Sliding animation for active class 
+Objective: Create a smooth sliding effect for active class When
+User clicks on an inactivated link
+
+Problem 1: Active class should slide out
+Problem 2: Active Class should slide in
+Problem 3: Active Class should be visible during transition
+Problem 4: Transition should be smooth and not abrupt
+Problem 5: Active Class should stop on the link which is clicked
+*/

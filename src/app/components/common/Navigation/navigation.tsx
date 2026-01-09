@@ -9,10 +9,20 @@ import { Card } from "@/components/ui/Card/card";
 import LightModeIcon from "../../icons/light";
 import DarkModeIcon from "../../icons/dark";
 import './navigation.css';
+import { motion } from 'motion/react';
 
 export default function Navigation() {
   const [isDark, setIsDark] = useState<boolean>(false);
   const pathName = usePathname();
+  
+  const tabs = [
+    {id: 'home', label: "Home", href: "/" },
+    {id: 'journey', label: "Journey", href: "/journey" },
+    {id: 'projects', label: "Projects", href: "/projects" },
+    {id: 'contact', label: "Contact", href: "/contact" },
+  ];
+
+  let [activeTab, setActiveTab] = useState(tabs[0].id);
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -40,7 +50,6 @@ export default function Navigation() {
       setIsDark(true);
     }
   };
-
   return (
     <>
       <div className="w-full my-2 flex flex-row justify-between items-center">
@@ -56,27 +65,23 @@ export default function Navigation() {
         </div>
         {/* Navigation Buttons -> Change this to Cards */}
         <Card className="flex p-3 flex-row justify-around border w-1/3 border-radius items-center">
-          <Link href={"/"} className={pathName === "/" ? "active" : ""}>
-            Home
-          </Link>
-          <Link
-            href={"journey"}
-            className={pathName === "/journey" ? "active" : ""}
-          >
-            Journey
-          </Link>
-          {/* <Link
-            href={"projects"}
-            className={pathName === "/projects" ? "active" : ""}
-          >
-            Projects
-          </Link> */}
-          <Link
-            href={"contact"}
-            className={pathName === "/contact" ? "active" : ""}
-          >
-            Contact
-          </Link>
+          {tabs.map((tab) => (
+            <Link
+              key={tab.id}
+              href={tab.href}
+              className={`${pathName === tab.href ? "active" : ""} relative rounded-full px-3 py-1.5 text-sm font-medium transition focus:outline-none`}
+              onClick={() => setActiveTab(tab.id)}
+            >
+              {activeTab === tab.id && (
+                <motion.span
+                  layoutId="selectedIndicator" // The magic happens here
+                  className="absolute inset-0 bg-(--primary) rounded-full"
+                  transition={{ type: "spring", stiffness: 500, damping: 30 }}
+                />
+              )}
+              <span className="relative z-10">{tab.label}</span>
+            </Link>
+          ))}
         </Card>
         {/* Dark Mode Switch */}
         <div className="flex flex-row items-center">

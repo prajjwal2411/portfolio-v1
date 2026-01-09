@@ -30,9 +30,7 @@ export default function IntroCard() {
           <LinkedInIcon />
         </a>
       </div>
-      <div>
         <Button onClick={handleResumeClick}>Resume</Button>
-      </div>
     </Card>
   );
 }
