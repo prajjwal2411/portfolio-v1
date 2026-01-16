@@ -5,7 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 
 export default function Contact(){
     return <>
-        <div className="grid grid-cols-2 grid-rows-2 gap-2 h-screen my-12">
+        <div className="grid grid-cols-2 grid-rows-1 gap-2 h-full my-12">
             <div>
                 <div><h1 className="text-7xl font-bold mb-4">Let's Get in Touch</h1></div>
                 <div><p>Or just reach out manually to <span><a className="text-(--primary)" href="mailto:prajjwal1997@gmail.com">prajjwal1997@gmail.com</a></span></p></div> {/** Add a hyperlink to email ID*/}

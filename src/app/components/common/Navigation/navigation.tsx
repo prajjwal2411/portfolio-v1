@@ -18,7 +18,7 @@ export default function Navigation() {
   const tabs = [
     {id: 'home', label: "Home", href: "/" },
     {id: 'journey', label: "Journey", href: "/journey" },
-    {id: 'projects', label: "Projects", href: "/projects" },
+    // {id: 'projects', label: "Projects", href: "/projects" },
     {id: 'contact', label: "Contact", href: "/contact" },
   ];
 
@@ -63,7 +63,6 @@ export default function Navigation() {
             Prajjwal Singh
           </GradientText>
         </div>
-        {/* Navigation Buttons -> Change this to Cards */}
         <Card className="flex p-3 flex-row justify-around border w-1/3 border-radius items-center">
           {tabs.map((tab) => (
             <Link
