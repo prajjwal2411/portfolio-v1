@@ -14,15 +14,16 @@ import { motion } from 'motion/react';
 export default function Navigation() {
   const [isDark, setIsDark] = useState<boolean>(false);
   const pathName = usePathname();
+  console.log(pathName);
   
   const tabs = [
     {id: 'home', label: "Home", href: "/" },
     {id: 'journey', label: "Journey", href: "/journey" },
-    // {id: 'projects', label: "Projects", href: "/projects" },
+    {id: 'projects', label: "Projects", href: "/projects" },
     {id: 'contact', label: "Contact", href: "/contact" },
   ];
 
-  let [activeTab, setActiveTab] = useState(tabs[0].id);
+  let [activeTab, setActiveTab] = useState(pathName === "/" ? "home" : pathName.slice(1));
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -68,7 +69,7 @@ export default function Navigation() {
             <Link
               key={tab.id}
               href={tab.href}
-              className={`${pathName === tab.href ? "active" : ""} relative rounded-full px-3 py-1.5 text-sm font-medium transition focus:outline-none`}
+              className={`relative rounded-full px-3 py-1.5 text-sm font-medium transition focus:outline-none`}
               onClick={() => setActiveTab(tab.id)}
             >
               {activeTab === tab.id && (
