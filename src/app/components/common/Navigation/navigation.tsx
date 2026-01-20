@@ -14,7 +14,6 @@ import { motion } from 'motion/react';
 export default function Navigation() {
   const [isDark, setIsDark] = useState<boolean>(false);
   const pathName = usePathname();
-  console.log(pathName);
   
   const tabs = [
     {id: 'home', label: "Home", href: "/" },
