@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navigation from "./components/common/Navigation/navigation";
+import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +20,8 @@ export default function RootLayout({
         <header>
           <Navigation />
         </header>
-        {children}
+        <main>{children}</main>
+        <Toaster></Toaster>
         <footer className="flex justify-center items-center h-16">
           <p>&copy; Made By Prajjwal Singh with ❤️. All rights reserved.</p>
         </footer>

@@ -6,12 +6,31 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { IContactForm } from "../Models/Interface/Contact";
 import { useForm, SubmitHandler } from "react-hook-form";
-// Add sonner after completing the form handling logic
+import { toast } from "sonner"
 
 export default function Contact() {
-    const { register, formState: { errors }, handleSubmit } = useForm<IContactForm>();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm<IContactForm>();
 
-    const onSubmit: SubmitHandler<IContactForm> = (data: IContactForm) => {};
+    const onSubmit: SubmitHandler<IContactForm> = async (data: IContactForm) => {
+        try {
+            const response = await fetch('/api/contact', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            if (!response.ok) {
+                throw new Error(`Error: ${response.status}`);
+            }
+            const result = await response.json();
+            toast.success(result.message || "Message sent successfully!");
+            // reset();
+        } catch (error) {
+
+        }
+    };
 
     return <>
         <div className="grid grid-cols-2 grid-rows-1 gap-2 h-full my-12">
