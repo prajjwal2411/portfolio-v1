@@ -63,7 +63,7 @@ export default function Navigation() {
             Prajjwal Singh
           </GradientText>
         </div>
-        <Card className="flex p-3 flex-row justify-around border w-1/3 border-radius items-center">
+        <Card className="flex p-3 flex-row justify-around border border-radius items-center ">
           {tabs.map((tab) => (
             <Link
               key={tab.id}
