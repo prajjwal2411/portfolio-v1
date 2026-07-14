@@ -1,11 +1,7 @@
-@import "tailwindcss";
+@reference "../../../globals.css";
 
 .active {
     border-radius: var(--radius);
     background-color: var(--primary);
     padding: .5em;
-}
-
-@media screen and (max-width: 680px) {
-    @apply text-sm;
 }

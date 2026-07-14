@@ -58,7 +58,7 @@ export default function Navigation() {
           <GradientText
             colors={["#6e56cf", "#9e8cfc", "#6e56cf", "#9e8cfc", "#6e56cf"]}
             animationSpeed={7}
-            className="text-3xl"
+            className="sm:text-base md:text-xl lg:text-2xl xl:text-3xl whitespace-nowrap"
           >
             Prajjwal Singh
           </GradientText>

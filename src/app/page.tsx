@@ -5,14 +5,15 @@ import IntroCard from "./components/common/IntroCard/IntroCard";
 export default function Home() {
   return (
     <>
-      <div className="grid grid-cols-2 grid-rows-2 gap-2 h-screen">
-        <div className="row-span-2 flex flex-col justify-center w-1/2 m-auto">
+    <div className="container mx-auto px-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-auto md:grid-rows-2 gap-4 md:gap-2 min-h-screen md:h-screen">
+        <div className="md:row-span-2 flex flex-col justify-center w-full md:w-1/2 m-auto">
           <IntroCard />
         </div>
         <div className="flex flex-col justify-center">
           <div className="">
-            <h1 className="text-5xl my-4">About Me</h1>
-            <p className="text-xl">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl my-4">About Me</h1>
+            <p className="text-base sm:text-lg md:text-xl">
               I&apos;m a frontend web developer dedicated to turning ideas into
               creative solutions. I specialize in creating seamless and
               intuitive user experiences. My approach focuses on creating
@@ -70,6 +71,7 @@ export default function Home() {
           {/* Marquee for companies I've worked for */}
           {/* <div></div> */}
         {/* </div> */}
+      </div>
       </div>
     </>
   );
