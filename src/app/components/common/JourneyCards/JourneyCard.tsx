@@ -8,14 +8,15 @@ export interface JourneyCardProps {
   header: string;
   title: string;
   description?: string[];
+  className?: string;
 }
 
 export default function JourneyCard(props: JourneyCardProps) {
-  const { header, title, description } = props;
+  const { header, title, description, className } = props;
 
   return (
     <>
-    <Card className="p-5">
+    <Card className={`${className} p-5`}>
       <CardTitle className="">{header}</CardTitle>
       <CardTitle>{title}</CardTitle>
       <CardDescription>

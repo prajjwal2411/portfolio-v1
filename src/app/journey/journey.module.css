@@ -45,14 +45,23 @@
     z-index: -1;
 }
 
+.timelineItem {
+    position: relative;
+}
+
 .timelinePointer {
     position: absolute;
-    padding: 2%;
     background-color: var(--muted-foreground);
     border-radius: 50%;
-    width: 3%;
-    right: 12px;
-    top: 18px;
+    width: 14px;
+    height: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 56px;
+}
+
+.timelinePointerMobile {
+    display: none;
 }
 
 @keyframes moveline {
@@ -65,7 +74,7 @@
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .timeline {
         margin: 50px auto;
     }
@@ -76,15 +85,49 @@
 
     .container {
         width: 100%;
+        left: 0;
         padding-left: 80px;
         padding-right: 25px;
+        top: 35px;
+    }
+
+    .leftContainer,
+    .rightContainer {
+        left: 0;
     }
 
     .textBox {
         font-size: 13px;
     }
 
-    .rightContainer {
-        left: 0;
+    .dateContainer {
+        width: auto;
+        position: absolute;
+        top: 0;
+        left: 80px;
+    }
+
+    .dateLeftContainer,
+    .dateRightContainer {
+        left: 80px;
+    }
+
+    .timelinePointer {
+        display: none;
+    }
+
+    .timelinePointerMobile {
+        display: block;
+        position: absolute;
+        background-color: var(--muted-foreground);
+        border-radius: 50%;
+        width: 14px;
+        height: 14px;
+        left: 24px;
+        top: 12px;
+    }
+
+    .container {
+        margin-top: 40px;
     }
 }

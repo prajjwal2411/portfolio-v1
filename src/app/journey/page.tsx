@@ -1,3 +1,5 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import JourneyCard from "../components/common/JourneyCards/JourneyCard";
 import styles from "./journey.module.css";
@@ -7,10 +9,10 @@ export default function Journey() {
   return (
     <>
       <div className="">
-        <div className={`${styles.timeline}`}>
+        <div className={styles.timeline}>
           {journeyData?.map((data, index) => {
             return (
-              <div key={index + 1}>
+              <div key={index + 1} className={styles.timelineItem}>
                 <Badge
                   className={`${styles.dateContainer} ${
                     index % 2
@@ -20,16 +22,13 @@ export default function Journey() {
                 >
                   {data?.date}
                 </Badge>
+                <div className={styles.timelinePointer}></div>
+                <div className={styles.timelinePointerMobile}></div>
                 <div
                   className={`${styles.container} ${
                     index % 2 ? styles.rightContainer : styles.leftContainer
                   }`}
                 >
-                  <div
-                    className={`${styles.timelinePointer} ${
-                      index % 2 ? styles.leftContainer : ""
-                    }`}
-                  ></div>
                   <JourneyCard
                     header={data?.header}
                     title={data?.title}
