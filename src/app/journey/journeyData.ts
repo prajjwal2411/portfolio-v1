@@ -12,9 +12,11 @@ export const journeyData: JourneyCardData[] = [
         title: 'Frontend Software Engineer',
         date: '2024-Present',
         description: [
-            'Increase the unit test coverage to 90% for the frontend repositories.',
-            'Migrated frontend repositories from azure devops to gitlab.',
-            'Designed a component library in React with Storybook, enabling consistent UI across multiple projects.'
+            'Contributed across 10+ frontend & backend repos within a 10+ person team, supporting a data encoding platform used by hundreds of researchers',
+            'Identified and eliminated 7–8 redundant API calls, improving page responsiveness',
+            'Modernized legacy apps — rebuilt frontend in React, enhanced backend services in .NET',
+            'Drove migration of 40+ repositories (incl. shared libraries) from GitLab to GitHub, rebuilt CI/CD pipelines on GitHub Actions, managed production cutover',
+            'Owned end-to-end production issue resolution across UI/API/infra — handled 8–10 issues/month',
         ]
     },
     {
@@ -22,8 +24,10 @@ export const journeyData: JourneyCardData[] = [
         title: 'Associate Software Developer',
         date: '2021-2024',
         description: [
-            'Implemented Google Analytics to gather and analyze user behavior data, providing valuable insights for continuous improvement.',
-            'Worked for Thomson Reuters Foundation maintained & redesigned their Stop Slavery Award website',
+            'Consultant Full-Stack Developer for Delhivery — Last Mile platform processing millions of parcels/day across 18,000+ pin codes',
+            'Optimized PostgreSQL query execution via indexing & query refactoring',
+            'Reduced API response times by up to 50% through backend refactoring',
+            'Proactively monitored services using AWS, New Relic, Coralogix during peak traffic periods',
         ]
     },
     {

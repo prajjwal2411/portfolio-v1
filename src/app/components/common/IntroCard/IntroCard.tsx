@@ -18,7 +18,7 @@ export default function IntroCard() {
       <div></div>
       <div className="text-center">
         <p className="text-5xl mb-12">Prajjwal Singh</p>
-        <p className="text-xl font-light">Frontend Developer</p>
+        <p className="text-xl font-light">Fullstack Developer</p>
         <p className="text-xl font-light">Pune, India</p>
         <p className="text-xl font-light">prajjwals2411@gmail.com</p>
       </div>

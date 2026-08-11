@@ -22,7 +22,7 @@ export default function Navigation() {
     {id: 'contact', label: "Contact", href: "/contact" },
   ];
 
-  let [activeTab, setActiveTab] = useState(pathName === "/" ? "home" : pathName.slice(1));
+  const [activeTab, setActiveTab] = useState(pathName === "/" ? "home" : pathName.slice(1));
 
   useEffect(() => {
     const root = window.document.documentElement;

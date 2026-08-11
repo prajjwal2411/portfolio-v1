@@ -17,14 +17,10 @@ export default function Home() {
                 About Me
               </h1>
               <p className="text-base sm:text-lg md:text-xl">
-                I&apos;m a frontend web developer dedicated to turning ideas
-                into creative solutions. I specialize in creating seamless and
-                intuitive user experiences. My approach focuses on creating
-                scalable, high-performing solutions tailored to both user needs
-                and business objectives. By prioritizing performance,
-                accessibility, and responsiveness, I strive to deliver
-                experiences that not only engage users but also drive tangible
-                results.
+                Fullstack Developer with 5+ YoE building and scaling web platforms across enterprise SaaS and high-volume logistics
+                environments. Skilled across the full stack — React, Node.js, .NET, and PostgreSQL — with hands-on experience driving
+                large-scale infrastructure migrations, optimizing application performance, and owning production reliability. Worked on
+                platforms supporting hundreds of internal users (NielsenIQ) and Delhivery's nationwide Last Mile logistics network.
               </p>
             </div>
           </div>
