@@ -17,10 +17,10 @@ export default function IntroCard() {
       {/* My Photo */}
       <div></div>
       <div className="text-center">
-        <p className="text-5xl mb-12">Prajjwal Singh</p>
-        <p className="text-xl font-light">Fullstack Developer</p>
-        <p className="text-xl font-light">Pune, India</p>
-        <p className="text-xl font-light">prajjwals2411@gmail.com</p>
+        <p className="text-3xl sm:text-4xl md:text-5xl mb-6 md:mb-12">Prajjwal Singh</p>
+        <p className="text-base sm:text-lg md:text-xl font-light">Fullstack Developer</p>
+        <p className="text-base sm:text-lg md:text-xl font-light">Pune, India</p>
+        <p className="text-base sm:text-lg md:text-xl font-light break-all">prajjwals2411@gmail.com</p>
       </div>
       <div className="flex flex-row mb-12">
         <a className="m-2" href="https://github.com/prajjwal2411" target="_blank">
