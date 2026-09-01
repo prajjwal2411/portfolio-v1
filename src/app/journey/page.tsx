@@ -8,7 +8,7 @@ import { journeyData } from "./journeyData";
 export default function Journey() {
   return (
     <>
-      <div className="">
+      <div>
         <div className={styles.timeline}>
           {journeyData?.map((data, index) => {
             return (
