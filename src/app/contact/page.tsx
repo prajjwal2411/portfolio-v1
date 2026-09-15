@@ -10,17 +10,17 @@ import CodepenIcon from "../components/icons/codepen";
 
 export default function Contact() {
     return <>
-        <div className="px-6 py-8">
+        <div className="px-80 py-8">
             <div className="flex flex-column justify-between mt-8">
                 <div className="w-full mt-2">
-                    <div className="my-1">
-                        <h4>Let's connect and create something awesome</h4>
-                        <p className="mt-4">Whether ypu're brand looking for a developer advocate, 
+                    <div className="my-1 pr-22">
+                        <h4>Let&apos;s connect and create something awesome</h4>
+                        <p className="mt-4 text-justify">Whether you&apos;re brand looking for a developer advocate, 
                         a company in need of FullStack Developer, or just want to chat about tech, 
-                        I'd love to hear from you.</p>
+                        I&apos;d love to hear from you.</p>
                         <h4 className="underline underline-offset-8 mt-5">prajjwals2411@gmail.com</h4>
                     </div>
-                    <div className="grid grid-cols-2 gap-5 mt-8 w-fit">
+                    <div className="grid grid-cols-2 gap-5 mt-12 w-fit">
                         <Card className="flex flex-row w-fit p-5 items-center">
                             <div><TwitterIcon /></div>
                             <div className="flex flex-col">
